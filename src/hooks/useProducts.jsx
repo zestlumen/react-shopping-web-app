@@ -1,13 +1,12 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { addNewProduct, getProducts as fetchProducts } from '../api/firebase';
+import { addNewProduct, getProducts } from '../api/firebase';
 
 //커스텀훅인 useProducts생성. product에 관련된 읽거나 쓰거나 업데이트하거나 하는 것들 다 담기
 //내부적으로 리액트쿼리사용. 읽어와서 productsQuery에 담아두고 변경할 수 있는 객체 addProduct 만들어두고
 export default function useProducts() {
     const queryClient = useQueryClient();
 
-    //getProducts는 유즈쿼리를 사용해 데이터 읽어옴
-    const productsQuery = useQuery(['products'], fetchProducts, {
+    const productsQuery = useQuery(['products'], getProducts, {
         staleTime: 1000 * 60
     });
 

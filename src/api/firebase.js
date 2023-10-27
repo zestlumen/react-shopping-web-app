@@ -75,6 +75,17 @@ export async function getProducts() {
         });
 }
 
+// export async function getProductsByCategory(category){
+//     return get(ref(database, 'products'))
+//     .then((snapshot)=>{
+//         if(snapshot.exists()){
+//             Object.
+//         }
+//     })
+// }
+
+
+
 //쇼핑카트에 필요한 function
 
 export async function getCart(userId) {

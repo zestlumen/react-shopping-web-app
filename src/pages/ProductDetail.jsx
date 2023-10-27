@@ -2,14 +2,10 @@ import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Button from '../components/ui/Button';
 import useCarts from '../hooks/useCarts';
-// import { useAuthContext } from '../context/AuthContext';
-// import { addOrUpdateToCart } from '../api/firebase';
 
 export default function ProductDetail() {
 
     const { addOrUpdateItem } = useCarts();
-    // const { uid } = useAuthContext();
-
     const {
         state: {
             product: { id, image, title, description, category, price, options }
@@ -26,7 +22,6 @@ export default function ProductDetail() {
                 setTimeout(() => setSuccess(null), 3000);
             }
         });
-        // addOrUpdateToCart(uid, product);
     }
 
     return (

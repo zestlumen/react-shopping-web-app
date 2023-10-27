@@ -35,18 +35,18 @@ const router = createBrowserRouter([
           </ProtectedRoute>
         )
       },
-      {
-        path: '/products/:id',
-        element: <ProductDetail />
-      },
       // {
-      //   path: '/products/:cate',
-      //   element: <AllProducts />
-      // },
-      // {
-      //   path: '/products/:cate/:id',
+      //   path: '/products/:id',
       //   element: <ProductDetail />
       // },
+      {
+        path: '/products/:category',
+        element: <AllProducts />
+      },
+      {
+        path: '/products/:category/:id',
+        element: <ProductDetail />
+      },
       {
         path: '/carts',
         element: (

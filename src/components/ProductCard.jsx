@@ -7,7 +7,7 @@ export default function ProductCard({ product, product: { id, image, title, cate
     return (
         <li
             onClick={() => {
-                navigate(`/products/${id}`, { state: { product } });
+                navigate(`/products/${category}/${id}`, { state: { product } });
             }}
             className='rounded-lg shadow-md overflow-hidden cursor-pointer transition-all hover:scale-105'
         >
