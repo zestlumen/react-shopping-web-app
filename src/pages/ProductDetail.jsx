@@ -27,7 +27,7 @@ export default function ProductDetail() {
     return (
         <>
             <span className=' text-gray-700 flex justify-center text-sm mb-5'>CATEGORY /
-                <Link to={`/products/${category}`}>
+                <Link to={`/products/${category.toLowerCase()}`}>
                     <span className='text-brand font-bold  hover:brightness-125'>
                         {category}
                     </span>

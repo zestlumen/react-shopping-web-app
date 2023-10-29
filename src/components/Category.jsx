@@ -16,7 +16,7 @@ export default function Category() {
                     <li
                         className='cursor-pointer border-transparent border-b-4 hover:border-brand'
                         key={index}
-                        onClick={() => navigate(`/products/${value}`)}
+                        onClick={() => navigate(`/products/${value.toLowerCase()}`)}
                     >
                         {value}
                     </li>

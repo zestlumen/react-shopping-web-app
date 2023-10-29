@@ -7,7 +7,7 @@ export default function AllProducts() {
 
     return (
         <div>
-            <Products category={category} />
+            <Products category={category.toUpperCase()} />
         </div>
     );
 }
